@@ -12,6 +12,7 @@ export default defineConfig({
       config: {
         backend: {
           name: "github",
+          repo: "brnkgabriel/astro-linktree",
           branch: "main"
         },
         collections: [
