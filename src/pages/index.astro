@@ -6,6 +6,15 @@ import FeaturedCard from "@/components/FeaturedCard.astro";
 import LinksLayout from "@/layouts/LinksLayout.astro";
 import Link from "@/components/Link.astro";
 import Social from "@/components/Social.astro";
+
+
+let links = []
+
+try {
+  links = await Astro.glob("./links/*.md");
+} catch (error) {
+  links = []
+}
 ---
 
 <MainLayout>
@@ -23,21 +32,17 @@ import Social from "@/components/Social.astro";
 		/> 
 	</FeaturedCardsLayout>
 	<LinksLayout>
-    <Link
-      title='🧑‍🚀 Astro'
-      description='Astro Homepage'
-      url='https://www.astro.build'
-    />
-    <Link
-      title='🌍 My Portfolio'
-      description='Look at my portfolio!'
-      url='https://www.stefanrows.com'
-    />
-    <Link
-      title='🎥 YouTube'
-      description='Visit my YouTube channel!'
-      url='https://www.youtube.com/c/stefanrows'
-    />
+    {
+      links.map(link => {
+        return (
+          <Link
+            title={link.frontmatter.title}
+            description={link.frontmatter.description}
+            url={link.frontmatter.url}
+          />
+        )
+      })
+    }
 	</LinksLayout>
   <Social />
 </MainLayout>
