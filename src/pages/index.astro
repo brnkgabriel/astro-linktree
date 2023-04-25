@@ -1,0 +1,43 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import Avatar from "@/components/Avatar.astro";
+import FeaturedCardsLayout from "@/layouts/FeaturedCardsLayout.astro";
+import FeaturedCard from "@/components/FeaturedCard.astro";
+import LinksLayout from "@/layouts/LinksLayout.astro";
+import Link from "@/components/Link.astro";
+import Social from "@/components/Social.astro";
+---
+
+<MainLayout>
+	<Avatar />
+	<FeaturedCardsLayout>
+		<FeaturedCard
+			iconName="logos:patreon"
+			 link="https://www.patreon.com/stefanrows"
+			 title="Support us"
+		/>
+		<FeaturedCard
+			iconName="logos:discord-icon"
+			 link="https://discord.com"
+			 title="Join the Community!"
+		/> 
+	</FeaturedCardsLayout>
+	<LinksLayout>
+    <Link
+      title='🧑‍🚀 Astro'
+      description='Astro Homepage'
+      url='https://www.astro.build'
+    />
+    <Link
+      title='🌍 My Portfolio'
+      description='Look at my portfolio!'
+      url='https://www.stefanrows.com'
+    />
+    <Link
+      title='🎥 YouTube'
+      description='Visit my YouTube channel!'
+      url='https://www.youtube.com/c/stefanrows'
+    />
+	</LinksLayout>
+  <Social />
+</MainLayout>
