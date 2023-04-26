@@ -11,12 +11,8 @@ export default defineConfig({
     NetlifyCMS({
       config: {
         backend: {
-          name: "github",
-          branch: "main",
-          repo: "brnkgabriel/astro-linktree",
-          api_root: "https://api.github.com",
-          auth_endpoint: "https://github.com/login/oauth/access_token",
-          
+          name: "git-gateway",
+          branch: "main"
         },
         collections: [
           {
