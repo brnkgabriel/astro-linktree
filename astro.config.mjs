@@ -13,7 +13,8 @@ export default defineConfig({
         backend: {
           name: "github",
           branch: "main",
-          repo: "brnkgabriel/astro-linktree"
+          repo: "brnkgabriel/astro-linktree",
+          api_root: "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"
         },
         collections: [
           {
