@@ -14,7 +14,9 @@ export default defineConfig({
           name: "github",
           branch: "main",
           repo: "brnkgabriel/astro-linktree",
-          api_root: "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"
+          api_root: "https://api.github.com",
+          auth_endpoint: "https://github.com/login/oauth/access_token",
+          
         },
         collections: [
           {
